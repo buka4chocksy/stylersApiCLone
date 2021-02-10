@@ -2,8 +2,7 @@ var model = require('../Model/contactUs');
 var user = require('../Model/user');
 var mailer = require('../Middleware/mailer');
 var subscribers = require('../Model/subscribers')
-const Excel = require('exceljs');
-const xl = require('excel4node');
+
 exports.createHelp = (data) => {
     return new Promise((resolve, reject) => {
         user.findById({ _id: data.userId }).then(found => {
