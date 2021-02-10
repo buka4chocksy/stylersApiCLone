@@ -24,6 +24,7 @@ exports.createHelp = (data) => {
 }
 
 exports.addSubscribers = async (data) => {
+    console.log(data , 'see data result')
     try {
         let checkemail = await subscribers.findOne({ email: data.email })
         if (checkemail) {
