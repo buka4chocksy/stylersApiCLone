@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
-
 //const uri = process.env.DB_URI;
-const uri = process.env.NODE_ENV == 'prod' ? process.env.DB_PROD : process.env.DB_LOCAL;
+const uri = process.env.DB_PROD ;
 
 module.exports = function init() {
     if (uri) {
