@@ -13,5 +13,17 @@ module.exports = function contactController() {
             .then(data => res.status(200).send(data))
             .catch(err => res.status(500).send(err));
     }
+
+    this.subscribers =(req,res)=>{
+        service.addSubscribers(req.body)
+        .then(data => res.status(200).send(data))
+        .catch(err => res.status(500).send(err));
+    }
+
+    this.deleteSubscriber =(req,res)=>{
+        service.deleteSubscriber(req.body)
+        .then(data => res.status(200).send(data))
+        .catch(err => res.status(500).send(err));
+    }
 }
 
